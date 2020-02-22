@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailUI" customModule="BisaMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImage" destination="iF7-fU-x2z" id="QPs-3y-vbE"/>
+                <outlet property="movieDateRelease" destination="qJn-Eh-I61" id="ejO-dQ-mlD"/>
+                <outlet property="movieImage" destination="Nxe-NP-A9b" id="gce-zv-cSm"/>
+                <outlet property="movieOverview" destination="o7n-Lr-bhk" id="RGz-lf-cT6"/>
+                <outlet property="movieTitle" destination="Nd7-fV-den" id="L8s-Ae-lpt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iF7-fU-x2z">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqh-9T-Tio">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nxe-NP-A9b">
+                            <rect key="frame" x="18" y="18" width="160" height="230"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="230" id="AXP-HB-Jmu"/>
+                                <constraint firstAttribute="width" constant="160" id="doe-zn-Sw1"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd7-fV-den">
+                            <rect key="frame" x="186" y="18" width="220" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJn-Eh-I61">
+                            <rect key="frame" x="186" y="39" width="220" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXy-Dh-z2Y">
+                            <rect key="frame" x="186" y="71.5" width="220" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet ssit akkms lorem dolor amet sit ipsum lorem" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7n-Lr-bhk">
+                            <rect key="frame" x="186" y="92.5" width="220" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.80347711267605637" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="o7n-Lr-bhk" firstAttribute="top" secondItem="rXy-Dh-z2Y" secondAttribute="bottom" constant="4" id="2NB-Ez-2LM"/>
+                        <constraint firstItem="Nd7-fV-den" firstAttribute="top" secondItem="Nxe-NP-A9b" secondAttribute="top" id="8re-pe-HGj"/>
+                        <constraint firstItem="Nd7-fV-den" firstAttribute="leading" secondItem="Nxe-NP-A9b" secondAttribute="trailing" constant="8" id="9Do-As-Wxi"/>
+                        <constraint firstItem="o7n-Lr-bhk" firstAttribute="leading" secondItem="rXy-Dh-z2Y" secondAttribute="leading" id="Awv-s8-vxb"/>
+                        <constraint firstItem="qJn-Eh-I61" firstAttribute="top" secondItem="Nd7-fV-den" secondAttribute="bottom" constant="4" id="BHL-dl-W3R"/>
+                        <constraint firstItem="qJn-Eh-I61" firstAttribute="leading" secondItem="Nd7-fV-den" secondAttribute="leading" id="LQp-S1-oFA"/>
+                        <constraint firstItem="Nxe-NP-A9b" firstAttribute="top" secondItem="gqh-9T-Tio" secondAttribute="top" constant="18" id="LU5-dn-AZU"/>
+                        <constraint firstItem="Nxe-NP-A9b" firstAttribute="leading" secondItem="gqh-9T-Tio" secondAttribute="leading" constant="18" id="MfP-7T-wpP"/>
+                        <constraint firstItem="rXy-Dh-z2Y" firstAttribute="top" secondItem="qJn-Eh-I61" secondAttribute="bottom" constant="18" id="Pb5-mF-aXl"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="o7n-Lr-bhk" secondAttribute="bottom" constant="18" id="UeD-WS-8c0"/>
+                        <constraint firstItem="rXy-Dh-z2Y" firstAttribute="trailing" secondItem="qJn-Eh-I61" secondAttribute="trailing" id="aCw-TA-QoN"/>
+                        <constraint firstAttribute="trailing" secondItem="Nd7-fV-den" secondAttribute="trailing" constant="8" id="avo-lG-nUF"/>
+                        <constraint firstItem="rXy-Dh-z2Y" firstAttribute="leading" secondItem="qJn-Eh-I61" secondAttribute="leading" id="f9l-TR-6vO"/>
+                        <constraint firstItem="qJn-Eh-I61" firstAttribute="trailing" secondItem="Nd7-fV-den" secondAttribute="trailing" id="hBy-9t-7mZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Nxe-NP-A9b" secondAttribute="bottom" constant="18" id="rPh-eV-hKS"/>
+                        <constraint firstItem="o7n-Lr-bhk" firstAttribute="trailing" secondItem="rXy-Dh-z2Y" secondAttribute="trailing" id="zNr-pC-xzv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iF7-fU-x2z" secondAttribute="trailing" id="3yV-hV-a6D"/>
+                <constraint firstItem="iF7-fU-x2z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BP6-fV-V6R"/>
+                <constraint firstItem="gqh-9T-Tio" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ley-bK-ySk"/>
+                <constraint firstAttribute="trailing" secondItem="gqh-9T-Tio" secondAttribute="trailing" id="Old-BI-y9Y"/>
+                <constraint firstItem="iF7-fU-x2z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TMq-N3-LJW"/>
+                <constraint firstItem="gqh-9T-Tio" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Tuw-iz-ID0"/>
+                <constraint firstAttribute="bottom" secondItem="iF7-fU-x2z" secondAttribute="bottom" id="yWb-Cb-BVc"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="33.333333333333336" y="24.776785714285712"/>
+        </view>
+    </objects>
+</document>

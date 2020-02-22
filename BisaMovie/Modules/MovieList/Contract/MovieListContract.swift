@@ -21,6 +21,7 @@ protocol MovieListPresentation: DataSource {
     var router: MovieListWireframe! { get set }
     
     func fetchMovieList(_ type: MovieType)
+    func presentDetail(_ index: IndexPath)
 }
 
 protocol MovieListUseCase: class {
@@ -39,5 +40,6 @@ protocol MovieListWireframe: class {
     // TODO: Declare wireframe methods
     var viewController: UIViewController? { get set }
     static func assembleModule() -> UIViewController
+    func presentDetail(_ movie: Movie, from view: PresentableView)
 }
 

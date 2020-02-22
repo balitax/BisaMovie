@@ -24,12 +24,14 @@ struct MovieList: Codable {
 // MARK: - Result
 struct Movie: Codable {
     let posterPath: String?
+    let backdropPath: String?
     let id: Int?
     let title: String?
     let overview, releaseDate: String?
 
     enum CodingKeys: String, CodingKey {
         case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
         case id
         case title
         case overview

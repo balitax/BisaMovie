@@ -50,6 +50,10 @@ extension MovieListPresenter: MovieListPresentation {
         interactor.fetchMovieList(type)
     }
     
+    func presentDetail(_ index: IndexPath) {
+        router.presentDetail(viewModel.movie[index.row], from: view)
+    }
+    
 }
 
 extension MovieListPresenter: MovieListInteractorOutput {

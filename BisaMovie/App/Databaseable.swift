@@ -20,7 +20,7 @@ protocol Databaseable: class {
     func rxget<T: Object>(type: T.Type, predicate: String?) -> Single<Results<T>>
     func rxget<T: Object, K>(type: T.Type, key: K) -> Single<T>
     
-    func save(object: Object)
+    func save(object: Object, update: Bool)
     func save<S: Sequence>(objects: S) where S.Iterator.Element: Object
     func rxsave<T: Object>(object: T) -> Single<T>
     func rxsave<S: Sequence>(objects: S) -> Single<S> where S.Iterator.Element: Object
@@ -128,7 +128,7 @@ open class Database: Databaseable {
         })
     }
     
-    func save(object: Object) {
+    func save(object: Object, update: Bool = false) {
         guard let database = database else {
             debugPrint("instance not available")
             return
@@ -137,7 +137,11 @@ open class Database: Databaseable {
         do {
             try database.write {
                 debugPrint(object.description)
-                database.add(object, update: .all)
+                if update {
+                    database.add(object, update: .modified)
+                } else {
+                    database.add(object, update: .all)
+                }
             }
         } catch(let e) {
             debugPrint(e.localizedDescription)

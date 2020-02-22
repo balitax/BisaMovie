@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.enable = true
         
-        UINavigationBar.appearance().tintColor = UIColor.defaultTheme
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = MovieListRouter.assembleModule()

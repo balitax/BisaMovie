@@ -20,6 +20,26 @@
 		B63CFFAB2400C57500FF6232 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63CFFA22400C57500FF6232 /* APIClient.swift */; };
 		B63CFFAC2400C57500FF6232 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63CFFA32400C57500FF6232 /* APIRouter.swift */; };
 		B63CFFAD2400C57500FF6232 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63CFFA42400C57500FF6232 /* Constant.swift */; };
+		B645BA69240102C200D01956 /* MovieDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA5B240102C200D01956 /* MovieDetailUI.swift */; };
+		B645BA6A240102C200D01956 /* MovieDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = B645BA5C240102C200D01956 /* MovieDetailUI.xib */; };
+		B645BA6B240102C200D01956 /* MovieDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA5E240102C200D01956 /* MovieDetailContract.swift */; };
+		B645BA6C240102C200D01956 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA60240102C200D01956 /* MovieDetailViewModel.swift */; };
+		B645BA6D240102C200D01956 /* CommonMovieDetailViewCellKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA61240102C200D01956 /* CommonMovieDetailViewCellKind.swift */; };
+		B645BA6E240102C200D01956 /* MovieDetailCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA62240102C200D01956 /* MovieDetailCellType.swift */; };
+		B645BA6F240102C200D01956 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA64240102C200D01956 /* MovieDetailPresenter.swift */; };
+		B645BA70240102C200D01956 /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA66240102C200D01956 /* MovieDetailInteractor.swift */; };
+		B645BA71240102C200D01956 /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA68240102C200D01956 /* MovieDetailRouter.swift */; };
+		B645BA76240126C700D01956 /* SwiftyToolTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA75240126C700D01956 /* SwiftyToolTip.swift */; };
+		B645BA782401286B00D01956 /* MovieStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA772401286B00D01956 /* MovieStorage.swift */; };
+		B645BA8B24012A6A00D01956 /* MovieBookmarkUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = B645BA7D24012A6A00D01956 /* MovieBookmarkUI.xib */; };
+		B645BA8C24012A6A00D01956 /* MovieBookmarkUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA7E24012A6A00D01956 /* MovieBookmarkUI.swift */; };
+		B645BA8D24012A6A00D01956 /* MovieBookmarkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA8024012A6A00D01956 /* MovieBookmarkContract.swift */; };
+		B645BA8E24012A6A00D01956 /* CommonMovieBookmarkViewCellKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA8224012A6A00D01956 /* CommonMovieBookmarkViewCellKind.swift */; };
+		B645BA8F24012A6A00D01956 /* MovieBookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA8324012A6A00D01956 /* MovieBookmarkViewModel.swift */; };
+		B645BA9024012A6A00D01956 /* MovieBookmarkCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA8424012A6A00D01956 /* MovieBookmarkCellType.swift */; };
+		B645BA9124012A6A00D01956 /* MovieBookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA8624012A6A00D01956 /* MovieBookmarkPresenter.swift */; };
+		B645BA9224012A6A00D01956 /* MovieBookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA8824012A6A00D01956 /* MovieBookmarkInteractor.swift */; };
+		B645BA9324012A6A00D01956 /* MovieBookmarkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645BA8A24012A6A00D01956 /* MovieBookmarkRouter.swift */; };
 		B6ABD1182400C68C009B201F /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABD1112400C68C009B201F /* CellConfigurable.swift */; };
 		B6ABD1192400C68C009B201F /* AlertableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABD1122400C68C009B201F /* AlertableView.swift */; };
 		B6ABD11A2400C68C009B201F /* PresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ABD1132400C68C009B201F /* PresentableView.swift */; };
@@ -89,6 +109,26 @@
 		B63CFFA22400C57500FF6232 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B63CFFA32400C57500FF6232 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		B63CFFA42400C57500FF6232 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B645BA5B240102C200D01956 /* MovieDetailUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailUI.swift; sourceTree = "<group>"; };
+		B645BA5C240102C200D01956 /* MovieDetailUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailUI.xib; sourceTree = "<group>"; };
+		B645BA5E240102C200D01956 /* MovieDetailContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailContract.swift; sourceTree = "<group>"; };
+		B645BA60240102C200D01956 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		B645BA61240102C200D01956 /* CommonMovieDetailViewCellKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMovieDetailViewCellKind.swift; sourceTree = "<group>"; };
+		B645BA62240102C200D01956 /* MovieDetailCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailCellType.swift; sourceTree = "<group>"; };
+		B645BA64240102C200D01956 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
+		B645BA66240102C200D01956 /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
+		B645BA68240102C200D01956 /* MovieDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
+		B645BA75240126C700D01956 /* SwiftyToolTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyToolTip.swift; sourceTree = "<group>"; };
+		B645BA772401286B00D01956 /* MovieStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStorage.swift; sourceTree = "<group>"; };
+		B645BA7D24012A6A00D01956 /* MovieBookmarkUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieBookmarkUI.xib; sourceTree = "<group>"; };
+		B645BA7E24012A6A00D01956 /* MovieBookmarkUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieBookmarkUI.swift; sourceTree = "<group>"; };
+		B645BA8024012A6A00D01956 /* MovieBookmarkContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieBookmarkContract.swift; sourceTree = "<group>"; };
+		B645BA8224012A6A00D01956 /* CommonMovieBookmarkViewCellKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMovieBookmarkViewCellKind.swift; sourceTree = "<group>"; };
+		B645BA8324012A6A00D01956 /* MovieBookmarkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieBookmarkViewModel.swift; sourceTree = "<group>"; };
+		B645BA8424012A6A00D01956 /* MovieBookmarkCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieBookmarkCellType.swift; sourceTree = "<group>"; };
+		B645BA8624012A6A00D01956 /* MovieBookmarkPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieBookmarkPresenter.swift; sourceTree = "<group>"; };
+		B645BA8824012A6A00D01956 /* MovieBookmarkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieBookmarkInteractor.swift; sourceTree = "<group>"; };
+		B645BA8A24012A6A00D01956 /* MovieBookmarkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieBookmarkRouter.swift; sourceTree = "<group>"; };
 		B6ABD1112400C68C009B201F /* CellConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
 		B6ABD1122400C68C009B201F /* AlertableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertableView.swift; sourceTree = "<group>"; };
 		B6ABD1132400C68C009B201F /* PresentableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentableView.swift; sourceTree = "<group>"; };
@@ -248,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				B6ABD14B2400D7A2009B201F /* MovieList.swift */,
+				B645BA772401286B00D01956 /* MovieStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +302,134 @@
 				B63CFFA42400C57500FF6232 /* Constant.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		B645BA59240102C200D01956 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA5A240102C200D01956 /* UI */,
+				B645BA5D240102C200D01956 /* Contract */,
+				B645BA5F240102C200D01956 /* Entity */,
+				B645BA63240102C200D01956 /* Presenter */,
+				B645BA65240102C200D01956 /* Interactor */,
+				B645BA67240102C200D01956 /* Router */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		B645BA5A240102C200D01956 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA5B240102C200D01956 /* MovieDetailUI.swift */,
+				B645BA5C240102C200D01956 /* MovieDetailUI.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B645BA5D240102C200D01956 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA5E240102C200D01956 /* MovieDetailContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		B645BA5F240102C200D01956 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA60240102C200D01956 /* MovieDetailViewModel.swift */,
+				B645BA61240102C200D01956 /* CommonMovieDetailViewCellKind.swift */,
+				B645BA62240102C200D01956 /* MovieDetailCellType.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B645BA63240102C200D01956 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA64240102C200D01956 /* MovieDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B645BA65240102C200D01956 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA66240102C200D01956 /* MovieDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B645BA67240102C200D01956 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA68240102C200D01956 /* MovieDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B645BA7B24012A6A00D01956 /* MovieBookmark */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA7C24012A6A00D01956 /* UI */,
+				B645BA7F24012A6A00D01956 /* Contract */,
+				B645BA8124012A6A00D01956 /* Entity */,
+				B645BA8524012A6A00D01956 /* Presenter */,
+				B645BA8724012A6A00D01956 /* Interactor */,
+				B645BA8924012A6A00D01956 /* Router */,
+			);
+			path = MovieBookmark;
+			sourceTree = "<group>";
+		};
+		B645BA7C24012A6A00D01956 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA7D24012A6A00D01956 /* MovieBookmarkUI.xib */,
+				B645BA7E24012A6A00D01956 /* MovieBookmarkUI.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B645BA7F24012A6A00D01956 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA8024012A6A00D01956 /* MovieBookmarkContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		B645BA8124012A6A00D01956 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA8224012A6A00D01956 /* CommonMovieBookmarkViewCellKind.swift */,
+				B645BA8324012A6A00D01956 /* MovieBookmarkViewModel.swift */,
+				B645BA8424012A6A00D01956 /* MovieBookmarkCellType.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B645BA8524012A6A00D01956 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA8624012A6A00D01956 /* MovieBookmarkPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B645BA8724012A6A00D01956 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA8824012A6A00D01956 /* MovieBookmarkInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B645BA8924012A6A00D01956 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B645BA8A24012A6A00D01956 /* MovieBookmarkRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		B6ABD1102400C68C009B201F /* Protocols */ = {
@@ -281,6 +450,8 @@
 			isa = PBXGroup;
 			children = (
 				B6ABD1222400C844009B201F /* MovieList */,
+				B645BA59240102C200D01956 /* MovieDetail */,
+				B645BA7B24012A6A00D01956 /* MovieBookmark */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -357,6 +528,7 @@
 				B6ABD1432400CB98009B201F /* UITableView+Extensions.swift */,
 				B6ABD1472400CC16009B201F /* UIView+Extensions.swift */,
 				B6ABD1492400CC5A009B201F /* GSView.swift */,
+				B645BA75240126C700D01956 /* SwiftyToolTip.swift */,
 				B6ABD14F2400E0E1009B201F /* UIImageView+Extensions.swift */,
 			);
 			path = Components;
@@ -484,6 +656,8 @@
 				B63CFF762400C32A00FF6232 /* LaunchScreen.storyboard in Resources */,
 				B63CFF732400C32A00FF6232 /* Assets.xcassets in Resources */,
 				B6ABD1422400C9FD009B201F /* MovieListTableViewCell.xib in Resources */,
+				B645BA6A240102C200D01956 /* MovieDetailUI.xib in Resources */,
+				B645BA8B24012A6A00D01956 /* MovieBookmarkUI.xib in Resources */,
 				B6ABD1322400C844009B201F /* MovieListUI.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,25 +786,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B645BA8C24012A6A00D01956 /* MovieBookmarkUI.swift in Sources */,
 				B6ABD1372400C844009B201F /* CommonMovieListViewCellKind.swift in Sources */,
+				B645BA8E24012A6A00D01956 /* CommonMovieBookmarkViewCellKind.swift in Sources */,
+				B645BA76240126C700D01956 /* SwiftyToolTip.swift in Sources */,
+				B645BA70240102C200D01956 /* MovieDetailInteractor.swift in Sources */,
+				B645BA6E240102C200D01956 /* MovieDetailCellType.swift in Sources */,
 				B6ABD1382400C844009B201F /* MovieListPresenter.swift in Sources */,
 				B6ABD13D2400C883009B201F /* UIColor+Extensions.swift in Sources */,
+				B645BA6D240102C200D01956 /* CommonMovieDetailViewCellKind.swift in Sources */,
 				B6ABD11D2400C68C009B201F /* DataSource.swift in Sources */,
+				B645BA69240102C200D01956 /* MovieDetailUI.swift in Sources */,
+				B645BA9324012A6A00D01956 /* MovieBookmarkRouter.swift in Sources */,
+				B645BA6B240102C200D01956 /* MovieDetailContract.swift in Sources */,
+				B645BA9024012A6A00D01956 /* MovieBookmarkCellType.swift in Sources */,
 				B6ABD11B2400C68C009B201F /* HasApply.swift in Sources */,
 				B63CFFAC2400C57500FF6232 /* APIRouter.swift in Sources */,
 				B6ABD1332400C844009B201F /* MovieListUI.swift in Sources */,
 				B6ABD14E2400DC39009B201F /* MovieListTableViewCellViewModel.swift in Sources */,
 				B63CFFAD2400C57500FF6232 /* Constant.swift in Sources */,
+				B645BA71240102C200D01956 /* MovieDetailRouter.swift in Sources */,
 				B6ABD13A2400C844009B201F /* MovieListRouter.swift in Sources */,
 				B63CFFA72400C57500FF6232 /* ContactStorage.swift in Sources */,
+				B645BA782401286B00D01956 /* MovieStorage.swift in Sources */,
 				B63CFFAA2400C57500FF6232 /* APIConfiguration.swift in Sources */,
 				B6ABD1502400E0E1009B201F /* UIImageView+Extensions.swift in Sources */,
+				B645BA8D24012A6A00D01956 /* MovieBookmarkContract.swift in Sources */,
 				B6ABD14A2400CC5A009B201F /* GSView.swift in Sources */,
 				B6ABD1482400CC16009B201F /* UIView+Extensions.swift in Sources */,
+				B645BA9124012A6A00D01956 /* MovieBookmarkPresenter.swift in Sources */,
+				B645BA6C240102C200D01956 /* MovieDetailViewModel.swift in Sources */,
 				B6ABD11A2400C68C009B201F /* PresentableView.swift in Sources */,
+				B645BA9224012A6A00D01956 /* MovieBookmarkInteractor.swift in Sources */,
 				B63CFF6A2400C32600FF6232 /* AppDelegate.swift in Sources */,
 				B6ABD1442400CB98009B201F /* UITableView+Extensions.swift in Sources */,
 				B6ABD14C2400D7A2009B201F /* MovieList.swift in Sources */,
+				B645BA6F240102C200D01956 /* MovieDetailPresenter.swift in Sources */,
 				B63CFFA62400C57500FF6232 /* Databaseable.swift in Sources */,
 				B6ABD1412400C9FD009B201F /* MovieListTableViewCell.swift in Sources */,
 				B6ABD1182400C68C009B201F /* CellConfigurable.swift in Sources */,
@@ -640,6 +831,7 @@
 				B6ABD1392400C844009B201F /* MovieListInteractor.swift in Sources */,
 				B6ABD11C2400C68C009B201F /* CellRepresentable.swift in Sources */,
 				B63CFFAB2400C57500FF6232 /* APIClient.swift in Sources */,
+				B645BA8F24012A6A00D01956 /* MovieBookmarkViewModel.swift in Sources */,
 				B6ABD1342400C844009B201F /* MovieListContract.swift in Sources */,
 				B6ABD1352400C844009B201F /* MovieListViewModel.swift in Sources */,
 			);
@@ -809,6 +1001,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X4Y2DQ8XJB;
 				INFOPLIST_FILE = BisaMovie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -829,6 +1022,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X4Y2DQ8XJB;
 				INFOPLIST_FILE = BisaMovie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

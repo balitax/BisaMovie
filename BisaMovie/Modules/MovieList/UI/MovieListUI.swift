@@ -19,10 +19,15 @@ class MovieListUI: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableViewComponent()
-        setupNavigation()
         tableView.showAnimatedSkeleton()
-        presenter.fetchMovieList(.popular)
         
+        self.navigationItem.title = "Popular"
+        presenter.fetchMovieList(.popular)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setupNavigation()
     }
     
     private func setupTableViewComponent() {
@@ -30,14 +35,29 @@ class MovieListUI: UIViewController {
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.register(nib: MovieListTableViewCell.self)
-        self.tableView.reloadData()
+        
+        let refreshControll = UIRefreshControl()
+        refreshControll.addTarget(self, action: #selector(self.didPullRefresh(_:)), for: .valueChanged)
+        self.tableView.refreshControl = refreshControll
+        
     }
     
     private func setupNavigation() {
-        self.navigationItem.title = "Popular"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationController?.navigationBar.barTintColor = UIColor.defaultTheme
-        self.navigationController?.view.backgroundColor = UIColor.defaultTheme
+        
+        let favoriteButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(self.didShowBookmarkMovie(_:)))
+        self.navigationItem.rightBarButtonItem = favoriteButtonItem
+    }
+    
+    @objc func didPullRefresh(_ sender: UIRefreshControl) {
+        presenter.fetchMovieList(.popular)
+        sender.endRefreshing()
+    }
+    
+    @objc func didShowBookmarkMovie(_ sender: UIBarButtonItem) {
+        let favorite = Database.shared.get(type: MovieStorage.self)
+        print("DATA ", favorite)
     }
     
     @IBAction func didShowMovieCategory(_ sender: UIButton) {
@@ -90,6 +110,10 @@ extension MovieListUI: UITableViewDelegate, UITableViewDataSource {
         cell.hideSkeleton()
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.presentDetail(indexPath)
     }
     
 }

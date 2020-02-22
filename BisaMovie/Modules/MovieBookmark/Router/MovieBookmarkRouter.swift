@@ -1,5 +1,5 @@
 //  
-//  MovieListRouter.swift
+//  MovieBookmarkRouter.swift
 //  BisaMovie
 //
 //  Created by Agus Cahyono on 22/02/20.
@@ -10,22 +10,22 @@
 import Foundation
 import UIKit
 
-class MovieListRouter {
+class MovieBookmarkRouter {
 
     weak var viewController: UIViewController?
 
 }
 
-extension MovieListRouter: MovieListWireframe {
+extension MovieBookmarkRouter: MovieBookmarkWireframe {
     
     static func assembleModule() -> UIViewController {
         
-        let view = MovieListUI()
-        let viewModel = MovieListViewModel()
-        let router = MovieListRouter()
-        let interactor = MovieListInteractor()
+        let view = MovieBookmarkUI()
+        let viewModel = MovieBookmarkViewModel()
+        let router = MovieBookmarkRouter()
+        let interactor = MovieBookmarkInteractor()
         
-        let presenter = MovieListPresenter(
+        let presenter = MovieBookmarkPresenter(
         view: view,
         viewModel: viewModel,
         interactor: interactor,
@@ -45,13 +45,6 @@ extension MovieListRouter: MovieListWireframe {
         interactor.output = presenter
         
         return navigation
-    }
-    
-    func presentDetail(_ movie: Movie, from view: PresentableView) {
-        let detail = MovieDetailRouter.assembleModule(movie)
-        if let navigationController = view.presentedViewController() as? UINavigationController {
-            navigationController.pushViewController(detail, animated: true)
-        }
     }
     
 }
