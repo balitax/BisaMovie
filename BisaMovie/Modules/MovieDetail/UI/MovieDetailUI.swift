@@ -63,6 +63,10 @@ class MovieDetailUI: UIViewController {
         }
         
         Database.shared.save(object: getMovie)
+        let alertAction = UIAlertAction(title: "OK", style: .destructive) { _ in
+            
+        }
+        self.showAlert(viewController: self, prefferedStyle: .alert, title: "Success!", message: "Movie has been bookmarked", alertActions: [alertAction])
         
     }
     

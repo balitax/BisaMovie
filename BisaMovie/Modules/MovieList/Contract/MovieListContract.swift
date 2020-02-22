@@ -22,6 +22,8 @@ protocol MovieListPresentation: DataSource {
     
     func fetchMovieList(_ type: MovieType)
     func presentDetail(_ index: IndexPath)
+    func presentBookmarkMovie()
+    
 }
 
 protocol MovieListUseCase: class {
@@ -41,5 +43,6 @@ protocol MovieListWireframe: class {
     var viewController: UIViewController? { get set }
     static func assembleModule() -> UIViewController
     func presentDetail(_ movie: Movie, from view: PresentableView)
+    func presentBookmarkMovie(from view: PresentableView)
 }
 

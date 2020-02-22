@@ -56,8 +56,7 @@ class MovieListUI: UIViewController {
     }
     
     @objc func didShowBookmarkMovie(_ sender: UIBarButtonItem) {
-        let favorite = Database.shared.get(type: MovieStorage.self)
-        print("DATA ", favorite)
+        presenter.presentBookmarkMovie()
     }
     
     @IBAction func didShowMovieCategory(_ sender: UIButton) {

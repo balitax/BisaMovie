@@ -54,6 +54,10 @@ extension MovieListPresenter: MovieListPresentation {
         router.presentDetail(viewModel.movie[index.row], from: view)
     }
     
+    func presentBookmarkMovie() {
+        router.presentBookmarkMovie(from: view)
+    }
+    
 }
 
 extension MovieListPresenter: MovieListInteractorOutput {

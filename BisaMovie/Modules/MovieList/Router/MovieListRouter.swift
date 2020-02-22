@@ -54,4 +54,11 @@ extension MovieListRouter: MovieListWireframe {
         }
     }
     
+    func presentBookmarkMovie(from view: PresentableView) {
+        let bookmark = MovieBookmarkRouter.assembleModule()
+        if let navigationController = view.presentedViewController() as? UINavigationController {
+            navigationController.pushViewController(bookmark, animated: true)
+        }
+    }
+    
 }

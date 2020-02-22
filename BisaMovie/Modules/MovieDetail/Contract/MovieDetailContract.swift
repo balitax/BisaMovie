@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MovieDetailView: PresentableView {
+protocol MovieDetailView: PresentableView, AlertableView {
     // TODO: Declare view methods
     var presenter: MovieDetailPresentation! { get set }
 }

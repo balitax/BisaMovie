@@ -30,10 +30,6 @@ extension MovieBookmarkRouter: MovieBookmarkWireframe {
         viewModel: viewModel,
         interactor: interactor,
         router: router)
-        
-        
-        let navigation = UINavigationController(rootViewController: view)
-        
         view.presenter =  presenter
         
         presenter.view = view
@@ -44,7 +40,7 @@ extension MovieBookmarkRouter: MovieBookmarkWireframe {
         
         interactor.output = presenter
         
-        return navigation
+        return view
     }
     
 }
