@@ -33,24 +33,15 @@ enum APIClientError: LocalizedError {
 
 class APIClient {
     
-    static func deleteLocalDatabase<T: Object>(_ object: T.Type) {
-        if let data = Database.shared.get(type: object.self) {
-            Database.shared.delete(objects: data)
-        }
-    }
-    
-    
     /// REQUEST API
     /// - Parameter router: router description
     /// - Parameter codable: codable description
     static func request<T: Codable>(with router: APIConfiguration, codable: T.Type) -> Observable<T> {
-        
         return Observable<T>.create({ observer -> Disposable in
             
             let request = Alamofire.request(router)
                 .validate()
                 .responseJSON(completionHandler: { response in
-                    
                     switch response.result {
                     case .success:
                         

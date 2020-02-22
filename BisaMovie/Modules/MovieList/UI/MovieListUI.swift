@@ -34,7 +34,7 @@ class MovieListUI: UIViewController {
     }
     
     private func setupNavigation() {
-        self.navigationItem.title = "Moviemu"
+        self.navigationItem.title = "Popular"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.barTintColor = UIColor.defaultTheme
         self.navigationController?.view.backgroundColor = UIColor.defaultTheme
@@ -42,19 +42,23 @@ class MovieListUI: UIViewController {
     
     @IBAction func didShowMovieCategory(_ sender: UIButton) {
         let popular = UIAlertAction(title: "Popular", style: .default) { action in
-            
+            self.navigationItem.title = "Popular"
+            self.presenter.fetchMovieList(.popular)
         }
         
         let upcoming = UIAlertAction(title: "Upcoming", style: .default) { action in
-            
+            self.navigationItem.title = "Upcoming"
+            self.presenter.fetchMovieList(.upcoming)
         }
         
         let toprated = UIAlertAction(title: "Top Rated", style: .default) { action in
-            
+            self.navigationItem.title = "Top Rated"
+            self.presenter.fetchMovieList(.top_rated)
         }
         
         let nowplaying = UIAlertAction(title: "Now Playing", style: .default) { action in
-            
+            self.navigationItem.title = "Now Playing"
+            self.presenter.fetchMovieList(.now_playing)
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { action in
@@ -116,8 +120,11 @@ extension MovieListUI: MovieListView {
             }
             self.showAlert(viewController: self, prefferedStyle: .alert, title: "Error!", message: error, alertActions: [alertAction])
         default:
-            self.tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.5))
+            self.tableView.hideSkeleton(transition: .crossDissolve(0.5))
             self.tableView.reloadData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tableView.scroll(to: .top, animated: true)
+            }
         }
     }
     

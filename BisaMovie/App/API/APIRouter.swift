@@ -10,13 +10,13 @@ import Alamofire
 
 enum APIRouter: APIConfiguration {
     case popular
-//    case detailContact(id: Int)
-//    case deleteContact(id: Int)
-//    case saveContact(firstname: String, lastname: String, phone_number: String, email: String, isfavorite: Bool)
+    case upcoming
+    case top_rated
+    case now_playing
     
     var baseURL: URL {
         switch self {
-        case .popular/*, .detailContact, .deleteContact, .saveContact*/:
+        case .popular, .upcoming, .top_rated, .now_playing:
             guard let url = URL(string: Constant.baseURL) else {
                 fatalError("baseURL could not be configured.")
             }
@@ -32,10 +32,7 @@ enum APIRouter: APIConfiguration {
     }
     
     var method: HTTPMethod {
-        switch self {
-        case .popular:
-            return .get
-        }
+        return .get
     }
     
     
@@ -43,6 +40,12 @@ enum APIRouter: APIConfiguration {
         switch self {
         case .popular:
             return "popular"
+        case .upcoming:
+            return "upcoming"
+        case .top_rated:
+            return "top_rated"
+        case .now_playing:
+            return "now_playing"
         }
     }
     
@@ -73,6 +76,7 @@ enum APIRouter: APIConfiguration {
         headers?.forEach({ (key, value) in
             urlRequest.setValue(value, forHTTPHeaderField: key)
         })
+        print("URL ", urlRequest.url?.absoluteString ?? "")
         return try parameterEncoding.encode(urlRequest, with: parameters)
     }
     

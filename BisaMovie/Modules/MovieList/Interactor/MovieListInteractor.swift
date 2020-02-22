@@ -22,11 +22,19 @@ extension MovieListInteractor: MovieListUseCase {
     /// - Parameter type: type movie
     func fetchMovieList(_ type: MovieType) {
         var router = APIRouter.popular
-        if type == .popular {
-            router = .popular
+        switch type {
+        case .popular:
+            router = APIRouter.popular
+        case .upcoming:
+            router = APIRouter.upcoming
+        case .top_rated:
+            router = APIRouter.top_rated
+        case .now_playing:
+            router = APIRouter.now_playing
         }
+        
         APIClient.request(with: router, codable: MovieList.self)
-        .asObservable()
+            .asObservable()
             .subscribe(onNext: { movielist in
                 if let movies = movielist.results {
                     self.output.onMovieListLoaded(movies)
@@ -34,6 +42,7 @@ extension MovieListInteractor: MovieListUseCase {
             }, onError: { error in
                 self.output.onError(error: error)
             }).disposed(by: disposeBag)
+        
     }
     
     

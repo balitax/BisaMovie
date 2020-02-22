@@ -88,39 +88,38 @@ public extension UITableView {
     subscript<T: UITableViewCell>(indexPath: IndexPath, withIdentifier identifier: String) -> T {
         dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? T ?? T()
     }
-}
+    
+    func reloadData(_ completion: @escaping ()->()) {
+        UIView.animate(withDuration: 0, animations: {
+            self.reloadData()
+        }, completion:{ _ in
+            completion()
+        })
+    }
 
-public extension Scrollable where Self: UITableView {
-    
-    /// Scrolls to the top of table view.
-    ///
-    /// - Parameter animated: `true` if you want to animate the change in position; `false` if it should be immediate.
-    func scrollToTop(animated: Bool = true) {
-        let indexPath = IndexPath(row: 0, section: 0)
-        
-        // Ensure row exists before scrolling
-        guard indexPath.section < numberOfSections
-            && indexPath.row < numberOfRows(inSection: indexPath.section) else {
-                return
+    func scroll(to: scrollsTo, animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+            let numberOfSections = self.numberOfSections
+            let numberOfRows = self.numberOfRows(inSection: numberOfSections-1)
+            switch to{
+            case .top:
+                if numberOfRows > 0 {
+                     let indexPath = IndexPath(row: 0, section: 0)
+                     self.scrollToRow(at: indexPath, at: .top, animated: animated)
+                }
+                break
+            case .bottom:
+                if numberOfRows > 0 {
+                    let indexPath = IndexPath(row: numberOfRows-1, section: (numberOfSections-1))
+                    self.scrollToRow(at: indexPath, at: .bottom, animated: animated)
+                }
+                break
+            }
         }
-        
-        scrollToRow(at: indexPath, at: .top, animated: animated)
+    }
+
+    enum scrollsTo {
+        case top,bottom
     }
     
-    /// Scrolls to the bottom of table view.
-    ///
-    /// - Parameter animated: `true` if you want to animate the change in position; `false` if it should be immediate.
-    func scrollToBottom(animated: Bool = true) {
-        guard numberOfSections > 0 else { return }
-        let lastSection = numberOfSections - 1
-        
-        let lastRow = numberOfRows(inSection: lastSection) - 1
-        guard lastRow > 0 else { return }
-        
-        scrollToRow(
-            at: IndexPath(row: lastRow, section: lastSection),
-            at: .bottom,
-            animated: animated
-        )
-    }
 }
