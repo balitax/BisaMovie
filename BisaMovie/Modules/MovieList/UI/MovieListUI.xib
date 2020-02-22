@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieListUI" customModule="BisaMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="eKq-KM-x1d" id="0VN-pM-Uz0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eKq-KM-x1d">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fUc-Kb-hNF"/>
+                        <outlet property="delegate" destination="-1" id="sha-PR-I8f"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0l-Jo-R3D">
+                    <rect key="frame" x="0.0" y="748" width="414" height="60"/>
+                    <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="xfo-R7-5U7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Movie Category">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didShowMovieCategory:" destination="-1" eventType="touchUpInside" id="Uqw-e3-pTQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eKq-KM-x1d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3F6-8c-oeX"/>
+                <constraint firstItem="k0l-Jo-R3D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CVr-Se-Gpw"/>
+                <constraint firstAttribute="trailing" secondItem="k0l-Jo-R3D" secondAttribute="trailing" id="IdB-79-h5X"/>
+                <constraint firstItem="eKq-KM-x1d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PTo-tG-Fwb"/>
+                <constraint firstAttribute="bottom" secondItem="k0l-Jo-R3D" secondAttribute="bottom" id="Vxg-LN-1yZ"/>
+                <constraint firstItem="k0l-Jo-R3D" firstAttribute="top" secondItem="eKq-KM-x1d" secondAttribute="bottom" id="o84-60-ncN"/>
+                <constraint firstAttribute="trailing" secondItem="eKq-KM-x1d" secondAttribute="trailing" id="taQ-OX-aRN"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="33.333333333333336" y="54.241071428571423"/>
+        </view>
+    </objects>
+</document>
