@@ -57,6 +57,10 @@ extension MovieBookmarkPresenter: MovieBookmarkPresentation {
     func deleteBookmark(_ index: IndexPath) {
         interactor.deleteBookmark(index)
     }
+    
+    func presentDetail(_ index: IndexPath) {
+        router.presentDetail(viewModel.movie[index.row].id, from: view)
+    }
 }
 
 extension MovieBookmarkPresenter: MovieBookmarkInteractorOutput {

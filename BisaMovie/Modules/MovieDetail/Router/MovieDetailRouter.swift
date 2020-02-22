@@ -18,7 +18,7 @@ class MovieDetailRouter {
 
 extension MovieDetailRouter: MovieDetailWireframe {
     
-    static func assembleModule(_ movie: Movie) -> UIViewController {
+    static func assembleModule(_ id: Int) -> UIViewController {
         
         let view = MovieDetailUI()
         let viewModel = MovieDetailViewModel()
@@ -31,9 +31,8 @@ extension MovieDetailRouter: MovieDetailWireframe {
         interactor: interactor,
         router: router)
         
+        viewModel.id = id
         view.presenter =  presenter
-        viewModel.movie = movie
-        
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor

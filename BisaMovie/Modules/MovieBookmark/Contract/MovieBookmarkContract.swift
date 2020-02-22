@@ -25,6 +25,7 @@ protocol MovieBookmarkPresentation: DataSource {
     func fetchBookmarkMovie()
     func deleteBookmark(_ index: IndexPath)
     func stopObserveBookmarkMovie()
+    func presentDetail(_ index: IndexPath)
 }
 
 protocol MovieBookmarkUseCase: class {
@@ -46,5 +47,6 @@ protocol MovieBookmarkWireframe: class {
     // TODO: Declare wireframe methods
     var viewController: UIViewController? { get set }
     static func assembleModule() -> UIViewController
+    func presentDetail(_ id: Int, from view: PresentableView)
 }
 

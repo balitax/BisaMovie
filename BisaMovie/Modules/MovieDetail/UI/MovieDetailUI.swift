@@ -51,7 +51,6 @@ class MovieDetailUI: UIViewController {
     }
     
     private func setupNavigation() {
-        self.navigationItem.title = presenter.viewModel.movie.title
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationController?.navigationBar.barTintColor = UIColor.defaultTheme
         self.navigationController?.navigationBar.isTranslucent = false
@@ -65,16 +64,16 @@ class MovieDetailUI: UIViewController {
     }
     
     @objc func didBookMarkItem(_ sender: UIBarButtonItem) {
-        let movie = presenter.viewModel.movie
+        guard let movie = presenter.viewModel.detail else { return }
         
         let getMovie = MovieStorage().apply { mov in
             mov.keyId = mov.incrementID()
-            mov.id = movie?.id ?? 0
-            mov.title = movie?.title
-            mov.posterPath = movie?.posterPath
-            mov.backdropPath = movie?.backdropPath
-            mov.overview = movie?.overview
-            mov.releaseDate = movie?.releaseDate
+            mov.id = movie.id ?? 0
+            mov.title = movie.title
+            mov.posterPath = movie.posterPath
+            mov.backdropPath = movie.backdropPath
+            mov.overview = movie.overview
+            mov.releaseDate = movie.releaseDate
         }
         
         Database.shared.save(object: getMovie)
@@ -156,8 +155,11 @@ extension MovieDetailUI: MovieDetailView {
             }
             self.showAlert(viewController: self, prefferedStyle: .alert, title: "Error!", message: error, alertActions: [alertAction])
         default:
-            self.tableView.hideSkeleton(transition: .crossDissolve(0.5))
-            self.tableView.reloadData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tableView.hideSkeleton(transition: .crossDissolve(0.5))
+                self.tableView.reloadData()
+            }
+            self.navigationItem.title = presenter.viewModel.detail?.title
         }
     }
     

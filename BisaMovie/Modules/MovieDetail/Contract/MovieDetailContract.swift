@@ -42,6 +42,6 @@ protocol MovieDetailInteractorOutput: class {
 protocol MovieDetailWireframe: class {
     // TODO: Declare wireframe methods
     var viewController: UIViewController? { get set }
-    static func assembleModule(_ movie: Movie) -> UIViewController
+    static func assembleModule(_ id: Int) -> UIViewController
 }
 

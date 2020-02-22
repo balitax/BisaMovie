@@ -42,7 +42,7 @@ protocol MovieListWireframe: class {
     // TODO: Declare wireframe methods
     var viewController: UIViewController? { get set }
     static func assembleModule() -> UIViewController
-    func presentDetail(_ movie: Movie, from view: PresentableView)
+    func presentDetail(_ id: Int, from view: PresentableView)
     func presentBookmarkMovie(from view: PresentableView)
 }
 

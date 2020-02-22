@@ -47,11 +47,11 @@ extension MovieDetailPresenter: MovieDetailPresentation {
     }
     
     func fetchDetailMovie() {
-        interactor.fetchDetailMovie(viewModel.movie.id ?? 0)
+        interactor.fetchDetailMovie(viewModel.id ?? 0)
     }
     
     func fetchReviewMovie() {
-        interactor.fetchReviewMovie(viewModel.movie.id ?? 0)
+        interactor.fetchReviewMovie(viewModel.id ?? 0)
     }
     
 }

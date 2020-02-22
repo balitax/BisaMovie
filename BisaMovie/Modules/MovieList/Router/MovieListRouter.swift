@@ -47,8 +47,8 @@ extension MovieListRouter: MovieListWireframe {
         return navigation
     }
     
-    func presentDetail(_ movie: Movie, from view: PresentableView) {
-        let detail = MovieDetailRouter.assembleModule(movie)
+    func presentDetail(_ id: Int, from view: PresentableView) {
+        let detail = MovieDetailRouter.assembleModule(id)
         if let navigationController = view.presentedViewController() as? UINavigationController {
             navigationController.pushViewController(detail, animated: true)
         }

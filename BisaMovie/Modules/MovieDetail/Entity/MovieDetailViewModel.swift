@@ -10,7 +10,7 @@ import Foundation
 
 class MovieDetailViewModel {
     
-    var movie: Movie!
+    var id: Int?
     var detail: DetailMovie?
     var review: [MovieReview]?
     
