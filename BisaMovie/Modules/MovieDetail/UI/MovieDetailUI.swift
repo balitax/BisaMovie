@@ -7,27 +7,42 @@
 //
 
 import UIKit
+import SkeletonView
 
 class MovieDetailUI: UIViewController {
     
-    @IBOutlet weak var movieImage: UIImageView!
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var movieDateRelease: UILabel!
-    @IBOutlet weak var movieOverview: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var presenter: MovieDetailPresentation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
-        self.bindData()
+        setupTableViewComponent()
+        presenter.fetchDetailMovie()
+        presenter.fetchReviewMovie()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        self.navigationItem.rightBarButtonItem?.addToolTip(description: "Tap this button to bookmark this movie")
-        self.navigationItem.rightBarButtonItem?.showToolTip()
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "infoTappedBefore")
+        if !launchedBefore  {
+            self.navigationItem.rightBarButtonItem?.addToolTip(description: "Tap this button to bookmark this movie")
+            self.navigationItem.rightBarButtonItem?.showToolTip()
+            UserDefaults.standard.set(true, forKey: "infoTappedBefore")
+        }
+        
+    }
+    
+    private func setupTableViewComponent() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.contentInset = UIEdgeInsets(top: -18, left: 0, bottom: 0, right: 0)
+        self.tableView.registerReusableCell(MovieDetailTableViewCell.self)
+        self.tableView.registerReusableCell(ReviewListTableViewCell.self)
+        self.tableView.reloadData()
+        self.tableView.showAnimatedSkeleton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,14 +88,77 @@ class MovieDetailUI: UIViewController {
 }
 
 
+extension MovieDetailUI: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return presenter.numberOfSection()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.numberOfRow(in: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let item = presenter?.item(at: indexPath) else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: item.type, for: indexPath)
+        
+        (cell as? CellConfigurable)?.configure(with: item)
+        cell.accessibilityLabel = item.type
+        
+        cell.hideSkeleton()
+        cell.selectionStyle = .none
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 1 {
+            return "Review Users"
+        } else {
+            return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+}
+
+extension MovieDetailUI: SkeletonTableViewDataSource {
+    
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
+        return 1
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        if indexPath.row == 0 {
+            return MovieDetailTableViewCell.reuseIdentifier
+        } else {
+            return ReviewListTableViewCell.reuseIdentifier
+        }
+    }
+    
+}
+
 extension MovieDetailUI: MovieDetailView {
     
-    func bindData() {
-        self.movieImage.setImage(presenter.viewModel.movie.posterPath ?? "")
-        self.backgroundImage.setImage(presenter.viewModel.movie.backdropPath ?? "")
-        self.movieTitle.text = presenter.viewModel.movie.title
-        self.movieDateRelease.text = presenter.viewModel.movie.releaseDate
-        self.movieOverview.text = presenter.viewModel.movie.overview
+    func configureView(with state: ViewStateKind) {
+        switch state {
+        case .error(let error):
+            let alertAction = UIAlertAction(title: "OK", style: .destructive) { _ in
+                
+            }
+            self.showAlert(viewController: self, prefferedStyle: .alert, title: "Error!", message: error, alertActions: [alertAction])
+        default:
+            self.tableView.hideSkeleton(transition: .crossDissolve(0.5))
+            self.tableView.reloadData()
+        }
     }
     
 }

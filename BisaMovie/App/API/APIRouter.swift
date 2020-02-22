@@ -13,10 +13,12 @@ enum APIRouter: APIConfiguration {
     case upcoming
     case top_rated
     case now_playing
+    case detail(id: Int)
+    case review(id: Int)
     
     var baseURL: URL {
         switch self {
-        case .popular, .upcoming, .top_rated, .now_playing:
+        case .popular, .upcoming, .top_rated, .now_playing, .detail, .review:
             guard let url = URL(string: Constant.baseURL) else {
                 fatalError("baseURL could not be configured.")
             }
@@ -46,6 +48,10 @@ enum APIRouter: APIConfiguration {
             return "top_rated"
         case .now_playing:
             return "now_playing"
+        case .detail(let id):
+            return "\(id)"
+        case .review(let id):
+            return "\(id)/reviews"
         }
     }
     

@@ -34,7 +34,7 @@ class MovieListUI: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.register(nib: MovieListTableViewCell.self)
+        self.tableView.registerReusableCell(MovieListTableViewCell.self)
         
         let refreshControll = UIRefreshControl()
         refreshControll.addTarget(self, action: #selector(self.didPullRefresh(_:)), for: .valueChanged)
@@ -100,7 +100,7 @@ extension MovieListUI: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MovieListTableViewCell = tableView[indexPath]
+        let cell = tableView.dequeueReusableCell(withIdentifier: MovieListTableViewCell.reuseIdentifier, for: indexPath) as! MovieListTableViewCell
         
         guard let item = presenter?.item(at: indexPath) else { return UITableViewCell() }
         cell.configure(with: item)
@@ -128,7 +128,7 @@ extension MovieListUI: SkeletonTableViewDataSource {
     }
     
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return "Cell"
+        return MovieListTableViewCell.reuseIdentifier
     }
     
 }

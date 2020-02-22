@@ -35,7 +35,7 @@ class MovieBookmarkUI: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.register(nib: MovieListTableViewCell.self)
+        self.tableView.registerReusableCell(MovieListTableViewCell.self)
     }
     
     private func setupNavigation() {
@@ -57,7 +57,7 @@ extension MovieBookmarkUI: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MovieListTableViewCell = tableView[indexPath]
+        let cell = tableView.dequeueReusableCell(withIdentifier: MovieListTableViewCell.reuseIdentifier, for: indexPath) as! MovieListTableViewCell
         
         guard let item = presenter?.item(at: indexPath) else { return UITableViewCell() }
         cell.configure(with: item)

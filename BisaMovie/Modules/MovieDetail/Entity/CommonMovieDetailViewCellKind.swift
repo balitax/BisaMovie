@@ -9,5 +9,6 @@
 import Foundation
 
 enum CommonMovieDetailViewCellKind {
-    case list
+    case detail
+    case review
 }

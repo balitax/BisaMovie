@@ -9,5 +9,6 @@
 import Foundation
 
 enum MovieDetailCellType: String {
-    case list = ""
+    case detail = "MovieDetailTableViewCell"
+    case review = "ReviewListTableViewCell"
 }

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="ReviewListTableViewCell" customModule="BisaMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="4Fx-Hp-dzb">
+                        <rect key="frame" x="18" y="18" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="8T0-ye-c8u"/>
+                            <constraint firstAttribute="width" constant="60" id="fD9-M1-rrt"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C2-y1-ddE">
+                        <rect key="frame" x="86" y="18" width="261" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet ssit akkms lorem dolor amet sit ipsum lorem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcX-qa-nfR">
+                        <rect key="frame" x="86" y="39" width="261" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KF5-fj-bws">
+                        <rect key="frame" x="18" y="99" width="329" height="1"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="uVH-HV-p7U"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4Fx-Hp-dzb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="1l2-LF-fKw"/>
+                    <constraint firstAttribute="trailing" secondItem="6C2-y1-ddE" secondAttribute="trailing" constant="18" id="7bm-z7-KB9"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Fx-Hp-dzb" secondAttribute="bottom" constant="18" id="9EJ-eQ-zcg"/>
+                    <constraint firstItem="4Fx-Hp-dzb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="Ew6-TG-hMe"/>
+                    <constraint firstItem="FcX-qa-nfR" firstAttribute="top" secondItem="6C2-y1-ddE" secondAttribute="bottom" constant="4" id="Hvl-qv-315"/>
+                    <constraint firstItem="6C2-y1-ddE" firstAttribute="leading" secondItem="4Fx-Hp-dzb" secondAttribute="trailing" constant="8" id="ItT-Ho-FGh"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FcX-qa-nfR" secondAttribute="bottom" constant="18" id="PVr-jq-eOo"/>
+                    <constraint firstItem="KF5-fj-bws" firstAttribute="trailing" secondItem="FcX-qa-nfR" secondAttribute="trailing" id="Um0-j6-UNo"/>
+                    <constraint firstItem="6C2-y1-ddE" firstAttribute="top" secondItem="4Fx-Hp-dzb" secondAttribute="top" id="bf9-Uf-zVn"/>
+                    <constraint firstItem="FcX-qa-nfR" firstAttribute="leading" secondItem="6C2-y1-ddE" secondAttribute="leading" id="gLy-Yo-9Hq"/>
+                    <constraint firstItem="FcX-qa-nfR" firstAttribute="trailing" secondItem="6C2-y1-ddE" secondAttribute="trailing" id="hzm-G3-4ot"/>
+                    <constraint firstAttribute="bottom" secondItem="KF5-fj-bws" secondAttribute="bottom" id="klV-yS-48K"/>
+                    <constraint firstItem="KF5-fj-bws" firstAttribute="leading" secondItem="4Fx-Hp-dzb" secondAttribute="leading" id="mnY-6h-GC2"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="authorName" destination="6C2-y1-ddE" id="bth-RW-yxz"/>
+                <outlet property="authorReview" destination="FcX-qa-nfR" id="BMQ-q9-HJK"/>
+                <outlet property="avatarAuthor" destination="4Fx-Hp-dzb" id="7Rp-q4-upt"/>
+            </connections>
+            <point key="canvasLocation" x="105.07246376811595" y="116.51785714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="placeholderImage" width="400" height="300"/>
+    </resources>
+</document>
