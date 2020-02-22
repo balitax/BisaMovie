@@ -83,7 +83,6 @@ class MovieDetailUI: UIViewController {
         self.showAlert(viewController: self, prefferedStyle: .alert, title: "Success!", message: "Movie has been bookmarked", alertActions: [alertAction])
         
     }
-    
 }
 
 

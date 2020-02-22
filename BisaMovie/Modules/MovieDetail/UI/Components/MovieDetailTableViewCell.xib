@@ -9,15 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="377" id="KGk-i7-Jjw" customClass="MovieDetailTableViewCell" customModule="BisaMovie" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="377"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="302" id="KGk-i7-Jjw" customClass="MovieDetailTableViewCell" customModule="BisaMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="302"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="377"/>
+                <rect key="frame" x="0.0" y="0.0" width="388" height="302"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQ5-hJ-mDz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="266"/>
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="302"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8kz-fr-t59">
                                 <rect key="frame" x="18" y="18" width="160" height="230"/>
@@ -30,7 +30,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1a-eZ-pAj">
-                                <rect key="frame" x="186" y="18" width="126" height="17"/>
+                                <rect key="frame" x="186" y="18" width="194" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Release date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dH-4l-mx3">
-                                <rect key="frame" x="186" y="39" width="126" height="14.5"/>
+                                <rect key="frame" x="186" y="39" width="194" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEJ-5v-cSc">
-                                <rect key="frame" x="186" y="71.5" width="126" height="17"/>
+                                <rect key="frame" x="186" y="71.5" width="194" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,8 +56,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Lorem ipsum dolor sit amet ssit akkms lorem dolor amet sit ipsum lorem" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-w1-Mcs">
-                                <rect key="frame" x="186" y="92.5" width="126" height="57.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-w1-Mcs">
+                                <rect key="frame" x="186" y="92.5" width="194" height="158"/>
+                                <string key="text">Lorem ipsum dolor sit amet ssit akkms lorem dolor amet sit ipsum lorem Lorem ipsum dolor sit amet ssit akkms lorem dolor amet sit ipsum lorem Lorem ipsum dolor sit amet ssit akkms lorem dolor amet sit ipsum lorem Lorem ipsum dolor sit amet ssit akkms lorem dolor amet sit ipsum lorem Lorem ipsum dolor sit amet ssit akkms lorem dolor amet </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,17 +67,16 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.8034771127" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gtD-w1-Mcs" secondAttribute="bottom" constant="18" id="0BQ-I6-Yho"/>
                             <constraint firstItem="l1a-eZ-pAj" firstAttribute="leading" secondItem="8kz-fr-t59" secondAttribute="trailing" constant="8" id="0tf-d5-sZl"/>
                             <constraint firstItem="8kz-fr-t59" firstAttribute="leading" secondItem="xQ5-hJ-mDz" secondAttribute="leading" constant="18" id="6Wn-JJ-nxg"/>
                             <constraint firstItem="DEJ-5v-cSc" firstAttribute="top" secondItem="2dH-4l-mx3" secondAttribute="bottom" constant="18" id="A46-ym-vCP"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gtD-w1-Mcs" secondAttribute="bottom" constant="18" id="Ixv-uT-Ur7"/>
                             <constraint firstItem="l1a-eZ-pAj" firstAttribute="top" secondItem="8kz-fr-t59" secondAttribute="top" id="LqT-WI-DEW"/>
                             <constraint firstItem="DEJ-5v-cSc" firstAttribute="trailing" secondItem="2dH-4l-mx3" secondAttribute="trailing" id="ZpS-0g-h2p"/>
-                            <constraint firstAttribute="bottom" secondItem="8kz-fr-t59" secondAttribute="bottom" constant="18" id="c4x-IH-0aS"/>
                             <constraint firstItem="gtD-w1-Mcs" firstAttribute="leading" secondItem="DEJ-5v-cSc" secondAttribute="leading" id="cew-MK-zvA"/>
                             <constraint firstAttribute="trailing" secondItem="l1a-eZ-pAj" secondAttribute="trailing" constant="8" id="fta-zO-Lbg"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8kz-fr-t59" secondAttribute="bottom" constant="18" id="kQr-gQ-6Gb"/>
                             <constraint firstItem="DEJ-5v-cSc" firstAttribute="leading" secondItem="2dH-4l-mx3" secondAttribute="leading" id="m6j-oj-E2o"/>
                             <constraint firstItem="8kz-fr-t59" firstAttribute="top" secondItem="xQ5-hJ-mDz" secondAttribute="top" constant="18" id="mkC-zZ-0h8"/>
                             <constraint firstItem="gtD-w1-Mcs" firstAttribute="trailing" secondItem="DEJ-5v-cSc" secondAttribute="trailing" id="nIZ-Lh-r6F"/>
@@ -93,7 +93,7 @@
                 <constraints>
                     <constraint firstItem="xQ5-hJ-mDz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NNU-ZX-UXs"/>
                     <constraint firstAttribute="trailing" secondItem="xQ5-hJ-mDz" secondAttribute="trailing" id="OsB-b6-0xX"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xQ5-hJ-mDz" secondAttribute="bottom" id="mbv-Xb-BWm"/>
+                    <constraint firstAttribute="bottom" secondItem="xQ5-hJ-mDz" secondAttribute="bottom" id="mbv-Xb-BWm"/>
                     <constraint firstItem="xQ5-hJ-mDz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="roY-rH-NtY"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
@@ -110,7 +110,7 @@
                 <outlet property="movieOverview" destination="gtD-w1-Mcs" id="IDC-nh-Rmb"/>
                 <outlet property="movieTitle" destination="l1a-eZ-pAj" id="kf0-Oe-2L0"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="246.09375"/>
+            <point key="canvasLocation" x="186.95652173913044" y="220.3125"/>
         </tableViewCell>
     </objects>
 </document>

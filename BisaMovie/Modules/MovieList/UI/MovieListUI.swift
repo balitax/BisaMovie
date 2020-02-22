@@ -51,6 +51,7 @@ class MovieListUI: UIViewController {
     }
     
     @objc func didPullRefresh(_ sender: UIRefreshControl) {
+        tableView.showAnimatedSkeleton()
         presenter.fetchMovieList(.popular)
         sender.endRefreshing()
     }
@@ -62,21 +63,25 @@ class MovieListUI: UIViewController {
     @IBAction func didShowMovieCategory(_ sender: UIButton) {
         let popular = UIAlertAction(title: "Popular", style: .default) { action in
             self.navigationItem.title = "Popular"
+            self.tableView.showAnimatedSkeleton()
             self.presenter.fetchMovieList(.popular)
         }
         
         let upcoming = UIAlertAction(title: "Upcoming", style: .default) { action in
             self.navigationItem.title = "Upcoming"
+            self.tableView.showAnimatedSkeleton()
             self.presenter.fetchMovieList(.upcoming)
         }
         
         let toprated = UIAlertAction(title: "Top Rated", style: .default) { action in
             self.navigationItem.title = "Top Rated"
+            self.tableView.showAnimatedSkeleton()
             self.presenter.fetchMovieList(.top_rated)
         }
         
         let nowplaying = UIAlertAction(title: "Now Playing", style: .default) { action in
             self.navigationItem.title = "Now Playing"
+            self.tableView.showAnimatedSkeleton()
             self.presenter.fetchMovieList(.now_playing)
         }
         
@@ -143,8 +148,10 @@ extension MovieListUI: MovieListView {
             }
             self.showAlert(viewController: self, prefferedStyle: .alert, title: "Error!", message: error, alertActions: [alertAction])
         default:
-            self.tableView.hideSkeleton(transition: .crossDissolve(0.5))
-            self.tableView.reloadData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tableView.hideSkeleton(transition: .crossDissolve(0.5))
+                self.tableView.reloadData()
+            }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.tableView.scroll(to: .top, animated: true)
             }
